@@ -23,6 +23,9 @@ namespace FFPacketViewer
         private void OpenFileButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
+
+            dialog.Filter = "tcpdump nanosecond pcap (*.pcap)|*.pcap";
+
             DialogResult result = dialog.ShowDialog();
 
             if (result == DialogResult.OK)
